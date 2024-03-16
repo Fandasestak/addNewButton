@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+</head>
+<body>
+    
+    <button id="newButton">add button</button>
+<!-- CSS kods:  -->
+<style>
+    /* Styly pro tlačítko */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* Styly pro nové tlačítko */
+.new {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+</style>
+
+
+<!-- Javascript kods:  -->
+<script>
+// 
+    // "id" button => Javascriptu, addEventListener => ("děj", co má potom udělat - jestli se splní "děj")
+    document.getElementById("newButton").addEventListener("click", function(){
+        // vytvořit element pomocí .createElement("cokoliv, co chceme vytvořit") 
+        var newButton = document.createElement("button");
+        newButton.textContent = "nové tlačítko";
+        // classList => umožňují pracovat s určitou třídou v CSS.
+        
+        // lze s classList: 
+        // .add("nameClass") - přidát nový Element do CSS.
+        // .remove("nameClass") - odebrat Element v CSS.
+        // .toggle("nameClass") - Přidá třídu, pokud ji Element nemá, nebo ji odstraní, pokud ji má.
+        // .contains("nameClass") -  Zjistí, zda má Element určitou třídu.
+        newButton.classList.add("new");
+
+        // document => ukazuje na celý HTML
+        // .body => přidat do Body v HTML
+        // .appendChild(name of new child) => přidáme novýho "potomka"(child) do "Body"(parent) 
+        document.body.appendChild(newButton);
+
+    })
+// 
+</script>
+<!--  -->
+</body>
+</html>
